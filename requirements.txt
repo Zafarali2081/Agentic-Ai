@@ -1,0 +1,5 @@
+# Minimal dependencies for Personal Budget Assistant Agentic AI
+openai>=1.0.0
+python-dotenv>=1.0.0
+streamlit>=1.30.0
+jupyter>=1.0.0
