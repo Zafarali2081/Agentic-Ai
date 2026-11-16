@@ -1,0 +1,804 @@
+{
+  "model_metadata": {
+    "algorithm": "Spark MLlib ALS (Alternating Least Squares)",
+    "rank": 10,
+    "max_iter": 15,
+    "reg_param": 0.1,
+    "test_ratings_evaluated": 19600,
+    "relevant_rating_threshold": 4.0
+  },
+  "als_metrics": {
+    "rmse": 0.9234,
+    "mae": 0.7293,
+    "precision_at_10": 0.6404,
+    "recall_at_10": 0.7126,
+    "training_time_sec": 6.39,
+    "prediction_latency_ms": 0.08
+  },
+  "popularity_baseline_metrics": {
+    "rmse": 1.0026,
+    "mae": 0.8004,
+    "precision_at_10": 0.5342,
+    "recall_at_10": 0.5152,
+    "training_time_sec": 0.45,
+    "prediction_latency_ms": 0.12
+  },
+  "comparison": [
+    {
+      "metric": "RMSE (Root Mean Sq Error)",
+      "als": 0.9234,
+      "baseline": 1.0026,
+      "improvement_percent": 7.9,
+      "better": "ALS"
+    },
+    {
+      "metric": "MAE (Mean Absolute Error)",
+      "als": 0.7293,
+      "baseline": 0.8004,
+      "improvement_percent": 8.88,
+      "better": "ALS"
+    },
+    {
+      "metric": "Precision@10",
+      "als": 0.6404,
+      "baseline": 0.5342,
+      "improvement_percent": 19.88,
+      "better": "ALS"
+    },
+    {
+      "metric": "Recall@10",
+      "als": 0.7126,
+      "baseline": 0.5152,
+      "improvement_percent": 38.32,
+      "better": "ALS"
+    }
+  ],
+  "curves": {
+    "precision_k": [
+      {
+        "k": 5,
+        "als": 0.758,
+        "baseline": 0.6519
+      },
+      {
+        "k": 10,
+        "als": 0.6404,
+        "baseline": 0.5342
+      },
+      {
+        "k": 15,
+        "als": 0.5436,
+        "baseline": 0.4462
+      },
+      {
+        "k": 20,
+        "als": 0.4716,
+        "baseline": 0.3837
+      }
+    ],
+    "recall_k": [
+      {
+        "k": 5,
+        "als": 0.4889,
+        "baseline": 0.3848
+      },
+      {
+        "k": 10,
+        "als": 0.7126,
+        "baseline": 0.5152
+      },
+      {
+        "k": 15,
+        "als": 0.8159,
+        "baseline": 0.5728
+      },
+      {
+        "k": 20,
+        "als": 0.8762,
+        "baseline": 0.607
+      }
+    ]
+  },
+  "actual_vs_predicted_sample": [
+    {
+      "userId": 896,
+      "movieId": 188,
+      "actual": 3.0,
+      "predicted": 3.24,
+      "error": 0.24
+    },
+    {
+      "userId": 401,
+      "movieId": 762,
+      "actual": 2.0,
+      "predicted": 2.74,
+      "error": 0.74
+    },
+    {
+      "userId": 911,
+      "movieId": 428,
+      "actual": 4.0,
+      "predicted": 3.86,
+      "error": 0.14
+    },
+    {
+      "userId": 780,
+      "movieId": 286,
+      "actual": 4.0,
+      "predicted": 3.52,
+      "error": 0.48
+    },
+    {
+      "userId": 763,
+      "movieId": 209,
+      "actual": 4.0,
+      "predicted": 4.05,
+      "error": 0.05
+    },
+    {
+      "userId": 180,
+      "movieId": 762,
+      "actual": 4.0,
+      "predicted": 3.8,
+      "error": 0.2
+    },
+    {
+      "userId": 279,
+      "movieId": 398,
+      "actual": 4.0,
+      "predicted": 2.17,
+      "error": 1.83
+    },
+    {
+      "userId": 13,
+      "movieId": 73,
+      "actual": 3.0,
+      "predicted": 2.95,
+      "error": 0.05
+    },
+    {
+      "userId": 151,
+      "movieId": 135,
+      "actual": 5.0,
+      "predicted": 4.04,
+      "error": 0.96
+    },
+    {
+      "userId": 741,
+      "movieId": 94,
+      "actual": 3.0,
+      "predicted": 2.94,
+      "error": 0.06
+    },
+    {
+      "userId": 650,
+      "movieId": 502,
+      "actual": 3.0,
+      "predicted": 3.07,
+      "error": 0.07
+    },
+    {
+      "userId": 363,
+      "movieId": 156,
+      "actual": 3.0,
+      "predicted": 3.64,
+      "error": 0.64
+    },
+    {
+      "userId": 848,
+      "movieId": 517,
+      "actual": 5.0,
+      "predicted": 4.05,
+      "error": 0.95
+    },
+    {
+      "userId": 622,
+      "movieId": 797,
+      "actual": 2.0,
+      "predicted": 2.78,
+      "error": 0.78
+    },
+    {
+      "userId": 880,
+      "movieId": 1119,
+      "actual": 3.0,
+      "predicted": 3.43,
+      "error": 0.43
+    },
+    {
+      "userId": 847,
+      "movieId": 290,
+      "actual": 4.0,
+      "predicted": 2.27,
+      "error": 1.73
+    },
+    {
+      "userId": 289,
+      "movieId": 282,
+      "actual": 3.0,
+      "predicted": 3.39,
+      "error": 0.39
+    },
+    {
+      "userId": 498,
+      "movieId": 275,
+      "actual": 3.0,
+      "predicted": 3.11,
+      "error": 0.11
+    },
+    {
+      "userId": 191,
+      "movieId": 307,
+      "actual": 3.0,
+      "predicted": 3.33,
+      "error": 0.33
+    },
+    {
+      "userId": 734,
+      "movieId": 210,
+      "actual": 3.0,
+      "predicted": 3.58,
+      "error": 0.58
+    },
+    {
+      "userId": 648,
+      "movieId": 931,
+      "actual": 2.0,
+      "predicted": 2.4,
+      "error": 0.4
+    },
+    {
+      "userId": 889,
+      "movieId": 237,
+      "actual": 4.0,
+      "predicted": 3.45,
+      "error": 0.55
+    },
+    {
+      "userId": 563,
+      "movieId": 254,
+      "actual": 3.0,
+      "predicted": 2.87,
+      "error": 0.13
+    },
+    {
+      "userId": 528,
+      "movieId": 213,
+      "actual": 4.0,
+      "predicted": 3.56,
+      "error": 0.44
+    },
+    {
+      "userId": 456,
+      "movieId": 546,
+      "actual": 4.0,
+      "predicted": 2.46,
+      "error": 1.54
+    },
+    {
+      "userId": 326,
+      "movieId": 612,
+      "actual": 2.0,
+      "predicted": 4.05,
+      "error": 2.05
+    },
+    {
+      "userId": 42,
+      "movieId": 281,
+      "actual": 3.0,
+      "predicted": 3.35,
+      "error": 0.35
+    },
+    {
+      "userId": 7,
+      "movieId": 588,
+      "actual": 4.0,
+      "predicted": 4.38,
+      "error": 0.38
+    },
+    {
+      "userId": 666,
+      "movieId": 46,
+      "actual": 4.0,
+      "predicted": 3.55,
+      "error": 0.45
+    },
+    {
+      "userId": 397,
+      "movieId": 268,
+      "actual": 4.0,
+      "predicted": 4.02,
+      "error": 0.02
+    },
+    {
+      "userId": 476,
+      "movieId": 80,
+      "actual": 3.0,
+      "predicted": 2.71,
+      "error": 0.29
+    },
+    {
+      "userId": 279,
+      "movieId": 80,
+      "actual": 4.0,
+      "predicted": 3.46,
+      "error": 0.54
+    },
+    {
+      "userId": 407,
+      "movieId": 659,
+      "actual": 5.0,
+      "predicted": 3.89,
+      "error": 1.11
+    },
+    {
+      "userId": 795,
+      "movieId": 169,
+      "actual": 5.0,
+      "predicted": 4.19,
+      "error": 0.81
+    },
+    {
+      "userId": 447,
+      "movieId": 206,
+      "actual": 4.0,
+      "predicted": 3.59,
+      "error": 0.41
+    },
+    {
+      "userId": 668,
+      "movieId": 294,
+      "actual": 3.0,
+      "predicted": 3.01,
+      "error": 0.01
+    },
+    {
+      "userId": 734,
+      "movieId": 132,
+      "actual": 3.0,
+      "predicted": 3.86,
+      "error": 0.86
+    },
+    {
+      "userId": 389,
+      "movieId": 631,
+      "actual": 5.0,
+      "predicted": 4.02,
+      "error": 0.98
+    },
+    {
+      "userId": 181,
+      "movieId": 1094,
+      "actual": 1.0,
+      "predicted": 0.71,
+      "error": 0.29
+    },
+    {
+      "userId": 291,
+      "movieId": 800,
+      "actual": 2.0,
+      "predicted": 3.25,
+      "error": 1.25
+    },
+    {
+      "userId": 524,
+      "movieId": 781,
+      "actual": 1.0,
+      "predicted": 2.75,
+      "error": 1.75
+    },
+    {
+      "userId": 709,
+      "movieId": 447,
+      "actual": 2.0,
+      "predicted": 3.24,
+      "error": 1.24
+    },
+    {
+      "userId": 435,
+      "movieId": 255,
+      "actual": 3.0,
+      "predicted": 2.89,
+      "error": 0.11
+    },
+    {
+      "userId": 318,
+      "movieId": 50,
+      "actual": 2.0,
+      "predicted": 4.3,
+      "error": 2.3
+    },
+    {
+      "userId": 717,
+      "movieId": 866,
+      "actual": 1.0,
+      "predicted": 3.45,
+      "error": 2.45
+    },
+    {
+      "userId": 453,
+      "movieId": 1170,
+      "actual": 3.0,
+      "predicted": 3.15,
+      "error": 0.15
+    },
+    {
+      "userId": 91,
+      "movieId": 50,
+      "actual": 5.0,
+      "predicted": 4.47,
+      "error": 0.53
+    },
+    {
+      "userId": 334,
+      "movieId": 293,
+      "actual": 3.0,
+      "predicted": 3.7,
+      "error": 0.7
+    },
+    {
+      "userId": 504,
+      "movieId": 185,
+      "actual": 5.0,
+      "predicted": 4.03,
+      "error": 0.97
+    },
+    {
+      "userId": 773,
+      "movieId": 7,
+      "actual": 2.0,
+      "predicted": 3.6,
+      "error": 1.6
+    },
+    {
+      "userId": 774,
+      "movieId": 386,
+      "actual": 2.0,
+      "predicted": 1.57,
+      "error": 0.43
+    },
+    {
+      "userId": 12,
+      "movieId": 88,
+      "actual": 5.0,
+      "predicted": 4.36,
+      "error": 0.64
+    },
+    {
+      "userId": 405,
+      "movieId": 1409,
+      "actual": 1.0,
+      "predicted": 2.41,
+      "error": 1.41
+    },
+    {
+      "userId": 49,
+      "movieId": 640,
+      "actual": 1.0,
+      "predicted": 3.19,
+      "error": 2.19
+    },
+    {
+      "userId": 245,
+      "movieId": 50,
+      "actual": 4.0,
+      "predicted": 3.21,
+      "error": 0.79
+    },
+    {
+      "userId": 721,
+      "movieId": 58,
+      "actual": 2.0,
+      "predicted": 3.57,
+      "error": 1.57
+    },
+    {
+      "userId": 134,
+      "movieId": 301,
+      "actual": 2.0,
+      "predicted": 3.19,
+      "error": 1.19
+    },
+    {
+      "userId": 14,
+      "movieId": 210,
+      "actual": 5.0,
+      "predicted": 3.77,
+      "error": 1.23
+    },
+    {
+      "userId": 286,
+      "movieId": 554,
+      "actual": 4.0,
+      "predicted": 2.07,
+      "error": 1.93
+    },
+    {
+      "userId": 591,
+      "movieId": 88,
+      "actual": 3.0,
+      "predicted": 3.14,
+      "error": 0.14
+    },
+    {
+      "userId": 715,
+      "movieId": 276,
+      "actual": 3.0,
+      "predicted": 3.41,
+      "error": 0.41
+    },
+    {
+      "userId": 535,
+      "movieId": 520,
+      "actual": 4.0,
+      "predicted": 3.96,
+      "error": 0.04
+    },
+    {
+      "userId": 207,
+      "movieId": 1436,
+      "actual": 3.0,
+      "predicted": 1.97,
+      "error": 1.03
+    },
+    {
+      "userId": 682,
+      "movieId": 823,
+      "actual": 2.0,
+      "predicted": 2.58,
+      "error": 0.58
+    },
+    {
+      "userId": 916,
+      "movieId": 428,
+      "actual": 4.0,
+      "predicted": 3.93,
+      "error": 0.07
+    },
+    {
+      "userId": 387,
+      "movieId": 428,
+      "actual": 4.0,
+      "predicted": 3.62,
+      "error": 0.38
+    },
+    {
+      "userId": 234,
+      "movieId": 654,
+      "actual": 5.0,
+      "predicted": 3.5,
+      "error": 1.5
+    },
+    {
+      "userId": 181,
+      "movieId": 980,
+      "actual": 1.0,
+      "predicted": 1.29,
+      "error": 0.29
+    },
+    {
+      "userId": 804,
+      "movieId": 260,
+      "actual": 2.0,
+      "predicted": 2.59,
+      "error": 0.59
+    },
+    {
+      "userId": 79,
+      "movieId": 246,
+      "actual": 5.0,
+      "predicted": 4.08,
+      "error": 0.92
+    },
+    {
+      "userId": 500,
+      "movieId": 831,
+      "actual": 3.0,
+      "predicted": 2.43,
+      "error": 0.57
+    },
+    {
+      "userId": 753,
+      "movieId": 483,
+      "actual": 5.0,
+      "predicted": 4.09,
+      "error": 0.91
+    },
+    {
+      "userId": 327,
+      "movieId": 191,
+      "actual": 4.0,
+      "predicted": 3.72,
+      "error": 0.28
+    },
+    {
+      "userId": 207,
+      "movieId": 631,
+      "actual": 2.0,
+      "predicted": 3.38,
+      "error": 1.38
+    },
+    {
+      "userId": 203,
+      "movieId": 250,
+      "actual": 4.0,
+      "predicted": 3.39,
+      "error": 0.61
+    },
+    {
+      "userId": 693,
+      "movieId": 28,
+      "actual": 2.0,
+      "predicted": 3.27,
+      "error": 1.27
+    },
+    {
+      "userId": 294,
+      "movieId": 597,
+      "actual": 3.0,
+      "predicted": 2.94,
+      "error": 0.06
+    },
+    {
+      "userId": 429,
+      "movieId": 385,
+      "actual": 3.0,
+      "predicted": 3.2,
+      "error": 0.2
+    },
+    {
+      "userId": 116,
+      "movieId": 328,
+      "actual": 3.0,
+      "predicted": 2.78,
+      "error": 0.22
+    },
+    {
+      "userId": 286,
+      "movieId": 1239,
+      "actual": 3.0,
+      "predicted": 2.67,
+      "error": 0.33
+    },
+    {
+      "userId": 540,
+      "movieId": 9,
+      "actual": 5.0,
+      "predicted": 4.08,
+      "error": 0.92
+    },
+    {
+      "userId": 303,
+      "movieId": 840,
+      "actual": 2.0,
+      "predicted": 2.48,
+      "error": 0.48
+    },
+    {
+      "userId": 716,
+      "movieId": 1124,
+      "actual": 3.0,
+      "predicted": 3.79,
+      "error": 0.79
+    },
+    {
+      "userId": 655,
+      "movieId": 631,
+      "actual": 4.0,
+      "predicted": 3.08,
+      "error": 0.92
+    },
+    {
+      "userId": 399,
+      "movieId": 110,
+      "actual": 2.0,
+      "predicted": 2.57,
+      "error": 0.57
+    },
+    {
+      "userId": 625,
+      "movieId": 380,
+      "actual": 3.0,
+      "predicted": 3.02,
+      "error": 0.02
+    },
+    {
+      "userId": 178,
+      "movieId": 546,
+      "actual": 3.0,
+      "predicted": 3.18,
+      "error": 0.18
+    },
+    {
+      "userId": 649,
+      "movieId": 298,
+      "actual": 4.0,
+      "predicted": 3.97,
+      "error": 0.03
+    },
+    {
+      "userId": 200,
+      "movieId": 195,
+      "actual": 5.0,
+      "predicted": 4.57,
+      "error": 0.43
+    },
+    {
+      "userId": 26,
+      "movieId": 1009,
+      "actual": 2.0,
+      "predicted": 2.58,
+      "error": 0.58
+    },
+    {
+      "userId": 712,
+      "movieId": 401,
+      "actual": 3.0,
+      "predicted": 2.8,
+      "error": 0.2
+    },
+    {
+      "userId": 235,
+      "movieId": 327,
+      "actual": 3.0,
+      "predicted": 2.92,
+      "error": 0.08
+    },
+    {
+      "userId": 413,
+      "movieId": 302,
+      "actual": 2.0,
+      "predicted": 4.33,
+      "error": 2.33
+    },
+    {
+      "userId": 200,
+      "movieId": 447,
+      "actual": 4.0,
+      "predicted": 3.94,
+      "error": 0.06
+    },
+    {
+      "userId": 654,
+      "movieId": 268,
+      "actual": 1.0,
+      "predicted": 3.45,
+      "error": 2.45
+    },
+    {
+      "userId": 222,
+      "movieId": 783,
+      "actual": 2.0,
+      "predicted": 2.43,
+      "error": 0.43
+    },
+    {
+      "userId": 551,
+      "movieId": 318,
+      "actual": 5.0,
+      "predicted": 4.65,
+      "error": 0.35
+    },
+    {
+      "userId": 291,
+      "movieId": 1471,
+      "actual": 3.0,
+      "predicted": 2.6,
+      "error": 0.4
+    },
+    {
+      "userId": 303,
+      "movieId": 919,
+      "actual": 4.0,
+      "predicted": 4.02,
+      "error": 0.02
+    },
+    {
+      "userId": 894,
+      "movieId": 305,
+      "actual": 4.0,
+      "predicted": 3.79,
+      "error": 0.21
+    }
+  ]
+}

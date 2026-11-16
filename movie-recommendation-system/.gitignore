@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.venv/
+venv/
+ENV/
+
+# Spark / Java / Scala
+*.class
+*.log
+metastore_db/
+derby.log
+target/
+.bsp/
+.metals/
+.bloop/
+
+# Datasets & Temp
+data/raw/*.zip
+data/raw/*.tar.gz
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+.DS_Store
+Thumbs.db

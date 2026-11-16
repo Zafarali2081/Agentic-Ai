@@ -1,0 +1,9 @@
+{
+  "total_vertices": 2625,
+  "total_users": 943,
+  "total_movies": 1682,
+  "total_edges": 100000,
+  "connected_components": 1,
+  "average_degree": 76.19,
+  "graph_type": "Bipartite User-Movie Interaction Network"
+}
